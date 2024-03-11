@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply font-lato;
+  }
+
+  .body {
+    @apply md:bg-green-10 text-black-100;
+  }
+
+  img {
+    @apply block w-full h-auto m-[0_auto];
+  }
+
+  input, select {
+    @apply focus:outline-1 focus:outline focus:outline-green-30;
+  }
+}
+
+@layer components {
+  .my-grid {
+    grid-template-areas: 
+    "h1 l"
+    "d l"
+    ;
+  }
+
+  .my-h1 {
+    grid-area: h1;
+  }
+  .my-d {
+    grid-area: d;
+  }
+  .my-l {
+    grid-area: l;
+  }
+
+  .dot-card {
+    @apply border border-dashed p-5;
+  }
+
+  .green-dot-card {
+    @apply border-green-30 bg-green-40;
+  }
+
+  .orange-dot-card {
+    @apply border-orange-10 bg-orange-20;
+  }
+
+  .blue-dot-card {
+    @apply border-blue-20 bg-blue-30;
+  }
+
+  .blor-dot-card {
+    @apply border-orange-10 bg-green-40;
+  }
+}
+
+.checkout {
+
+  background: #84a17d; /* fallback for old browsers */
+
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  height: 430px;
+
+  width: 50%;
+
+}
+
+
+.checkout-form {
+
+  padding: 20px 20px;
+
+}
+
+
+.checkout-field {
+
+  display: flex;
+
+  flex-direction: column;
+
+  margin-bottom: 20px;
+
+}
+
+
+.checkout-field label {
+
+  text-align: left;
+
+  color: #e0eafc;
+
+  font-size: 10px;
+
+  margin-bottom: 5px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.1rem;
+
+}
+
+
+.checkout-field input {
+
+  background-color: transparent;
+
+  border: 1px solid #cecece;
+
+  border-radius: 5px;
+
+  color: #e0eafc;
+
+  height: 35px;
+
+}
+
+
+.paystack-button {
+
+  cursor: pointer;
+
+  text-align: center;
+
+  font-size: 10px;
+
+  letter-spacing: 0.1rem;
+
+  text-transform: uppercase;
+
+  background-color: #bfbfbf;
+
+  font-weight: bold;
+
+  color: #e0eafc;
+
+  border: none;
+
+  border-radius: 5px;
+
+  width: 100%;
+
+  height: 45px;
+
+  margin-top: 40px;
+
+}
+
+.activeButton {
+  @apply text-green-600;
+}
